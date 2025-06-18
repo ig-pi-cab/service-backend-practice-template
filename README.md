@@ -99,6 +99,25 @@ foreach ($folder in $folders) {
   New-Item -ItemType Directory -Path $folder -Force
 }
 
+
+$folders = @(
+  "src",
+  "src/config",
+  "src/controllers",
+  "src/middlewares",
+  "src/models",
+  "src/queues",
+  "src/routes",
+  "src/services",
+  "src/utils",
+  "src/validations"
+)
+
+foreach ($folder in $folders) {
+  New-Item -ItemType Directory -Path $folder -Force
+  New-Item -ItemType File -Path "$folder/.gitkeep" -Force | Out-Null
+}
+
 ## Flujo para agregar una funcionalidad nueva (ej: crear servicio)
 
 1. Crear el modelo Mongoose en `/models/`
