@@ -27,7 +27,14 @@ cd servicehub-backend
 
 ### 2. Instala las dependencias
 
-npm install
+1. npm init -y
+
+2. npm install express mongoose dotenv jsonwebtoken bcryptjs cors zod passport passport-google-oauth20 winston
+3. npm install redis amqplib
+
+### 2.1 Instala herramientas de desarrollo
+
+4. npm install --save-dev nodemon
 
 ---
 
